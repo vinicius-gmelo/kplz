@@ -4,5 +4,5 @@ Termina processos pelo nome do comando. Não termina o processo do script ou o p
 Clonar o repositório ou baixar o script, habilitando a execução com `chmod +x bake.sh`. Para executar como um comando do shell, `mv kplz.sh bake; mv kplz $HOME/.local/bin` (ou `$HOME/.bin`, ou o diretório de scripts do usuário).
 ## Uso
 ```sh
-$ kplz [nome do processo]
+$ kplz [nome_do_comando]
 ```
