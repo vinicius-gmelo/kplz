@@ -27,8 +27,7 @@ if [ $# -gt 1 ] || [ -z $1 ]; then
   exit 1
 fi
 
-ps -e | grep -i $1 | while read line; do
-pid=$(echo $line | grep -o '^\S*') 
+ps -e -o pid=,comm= | grep -i $1 | cut -d' ' -f2 | while read pid; do
 if [ $pid -eq $$ ] || [ $pid -eq $PPID ]; then
   continue
 fi
