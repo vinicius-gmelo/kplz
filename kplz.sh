@@ -7,23 +7,8 @@
   doesn't kill the process.
 DESC
 
-prompt_echo()
-{
-  local options
-  local args
-  for arg in $@
-  do
-    if [ $(echo $arg | cut -c 1-1) = - ]; then
-      options="${options} ${arg}"
-    else
-      args="${args} ${arg}"
-    fi
-  done
-  echo $options $(basename $0): $args
-}
-
 if [ $# -gt 1 ] || [ -z $1 ]; then
-  prompt_echo 'kplz [process name]'
+  printf 'kplz [process_name]\n'
   exit 1
 fi
 
