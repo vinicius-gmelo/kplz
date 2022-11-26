@@ -8,7 +8,7 @@
 DESC
 
 if [ $# -gt 1 ] || [ -z $1 ]; then
-  printf 'kplz [process_name]\n'
+  printf 'kplz [command]\n'
   exit 1
 fi
 
